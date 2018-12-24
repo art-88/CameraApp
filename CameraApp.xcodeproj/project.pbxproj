@@ -14,6 +14,8 @@
 		AB3BF5D721D13592003ED3A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB3BF5D521D13592003ED3A5 /* LaunchScreen.storyboard */; };
 		AB3BF5E221D13592003ED3A5 /* CameraAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BF5E121D13592003ED3A5 /* CameraAppTests.swift */; };
 		AB3BF5ED21D13592003ED3A5 /* CameraAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BF5EC21D13592003ED3A5 /* CameraAppUITests.swift */; };
+		AB3BF60021D13940003ED3A5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3BF5FE21D13940003ED3A5 /* RxSwift.framework */; };
+		AB3BF60121D13940003ED3A5 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3BF5FF21D13940003ED3A5 /* RxCocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		AB3BF5E821D13592003ED3A5 /* CameraAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CameraAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3BF5EC21D13592003ED3A5 /* CameraAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAppUITests.swift; sourceTree = "<group>"; };
 		AB3BF5EE21D13592003ED3A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB3BF5FE21D13940003ED3A5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		AB3BF5FF21D13940003ED3A5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB3BF60021D13940003ED3A5 /* RxSwift.framework in Frameworks */,
+				AB3BF60121D13940003ED3A5 /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +87,7 @@
 				AB3BF5E021D13592003ED3A5 /* CameraAppTests */,
 				AB3BF5EB21D13592003ED3A5 /* CameraAppUITests */,
 				AB3BF5CA21D13591003ED3A5 /* Products */,
+				AB3BF5FD21D1393F003ED3A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +104,7 @@
 		AB3BF5CB21D13591003ED3A5 /* CameraApp */ = {
 			isa = PBXGroup;
 			children = (
+				AB3BF5FA21D13827003ED3A5 /* Classes */,
 				AB3BF5CC21D13591003ED3A5 /* AppDelegate.swift */,
 				AB3BF5CE21D13591003ED3A5 /* ViewController.swift */,
 				AB3BF5D021D13591003ED3A5 /* Main.storyboard */,
@@ -123,6 +131,38 @@
 				AB3BF5EE21D13592003ED3A5 /* Info.plist */,
 			);
 			path = CameraAppUITests;
+			sourceTree = "<group>";
+		};
+		AB3BF5FA21D13827003ED3A5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AB3BF5FB21D13841003ED3A5 /* Commons */,
+				AB3BF5FC21D1384B003ED3A5 /* Modules */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		AB3BF5FB21D13841003ED3A5 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		AB3BF5FC21D1384B003ED3A5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		AB3BF5FD21D1393F003ED3A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB3BF5FF21D13940003ED3A5 /* RxCocoa.framework */,
+				AB3BF5FE21D13940003ED3A5 /* RxSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +474,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDQ8MWV9TC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CameraApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +496,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDQ8MWV9TC;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CameraApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
