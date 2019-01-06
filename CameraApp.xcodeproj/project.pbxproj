@@ -15,10 +15,16 @@
 		AB3BF5E221D13592003ED3A5 /* CameraAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BF5E121D13592003ED3A5 /* CameraAppTests.swift */; };
 		AB3BF5ED21D13592003ED3A5 /* CameraAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BF5EC21D13592003ED3A5 /* CameraAppUITests.swift */; };
 		AB3BF60021D13940003ED3A5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3BF5FE21D13940003ED3A5 /* RxSwift.framework */; };
-		AB3BF60121D13940003ED3A5 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3BF5FF21D13940003ED3A5 /* RxCocoa.framework */; };
 		AB3BF60321D13BC7003ED3A5 /* StoryBoards.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BF60221D13BC7003ED3A5 /* StoryBoards.swift */; };
 		AB3BF60A21D13C32003ED3A5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BF60921D13C32003ED3A5 /* CameraViewController.swift */; };
 		AB3BF60C21D13C42003ED3A5 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB3BF60B21D13C42003ED3A5 /* Camera.storyboard */; };
+		ABEE503B21E1F88800478DA2 /* GoogleVisionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEE503A21E1F88800478DA2 /* GoogleVisionEntity.swift */; };
+		ABEE503D21E1F98200478DA2 /* RateLimitEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEE503C21E1F98200478DA2 /* RateLimitEntity.swift */; };
+		ABEE504021E1FA1B00478DA2 /* GithubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEE503F21E1FA1B00478DA2 /* GithubRequest.swift */; };
+		ABEE504521E1FB4F00478DA2 /* VisionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEE504421E1FB4F00478DA2 /* VisionRequest.swift */; };
+		ABEE504721E1FBE600478DA2 /* RateLimitRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEE504621E1FBE600478DA2 /* RateLimitRequest.swift */; };
+		ABEE504821E1FC5D00478DA2 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3BF5FF21D13940003ED3A5 /* RxCocoa.framework */; };
+		ABEE504A21E1FC6D00478DA2 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABEE504921E1FC6D00478DA2 /* APIKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +63,12 @@
 		AB3BF60221D13BC7003ED3A5 /* StoryBoards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoards.swift; sourceTree = "<group>"; };
 		AB3BF60921D13C32003ED3A5 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		AB3BF60B21D13C42003ED3A5 /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
+		ABEE503A21E1F88800478DA2 /* GoogleVisionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleVisionEntity.swift; sourceTree = "<group>"; };
+		ABEE503C21E1F98200478DA2 /* RateLimitEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateLimitEntity.swift; sourceTree = "<group>"; };
+		ABEE503F21E1FA1B00478DA2 /* GithubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRequest.swift; sourceTree = "<group>"; };
+		ABEE504421E1FB4F00478DA2 /* VisionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionRequest.swift; sourceTree = "<group>"; };
+		ABEE504621E1FBE600478DA2 /* RateLimitRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateLimitRequest.swift; sourceTree = "<group>"; };
+		ABEE504921E1FC6D00478DA2 /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +76,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABEE504A21E1FC6D00478DA2 /* APIKit.framework in Frameworks */,
+				ABEE504821E1FC5D00478DA2 /* RxCocoa.framework in Frameworks */,
 				AB3BF60021D13940003ED3A5 /* RxSwift.framework in Frameworks */,
-				AB3BF60121D13940003ED3A5 /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				AB3BF5FB21D13841003ED3A5 /* Commons */,
+				ABEE503921E1F86600478DA2 /* Models */,
 				AB3BF5FC21D1384B003ED3A5 /* Modules */,
 			);
 			path = Classes;
@@ -149,6 +163,7 @@
 		AB3BF5FB21D13841003ED3A5 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				ABEE503E21E1FA0100478DA2 /* Network */,
 				AB3BF60221D13BC7003ED3A5 /* StoryBoards.swift */,
 			);
 			path = Commons;
@@ -166,6 +181,7 @@
 		AB3BF5FD21D1393F003ED3A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ABEE504921E1FC6D00478DA2 /* APIKit.framework */,
 				AB3BF5FF21D13940003ED3A5 /* RxCocoa.framework */,
 				AB3BF5FE21D13940003ED3A5 /* RxSwift.framework */,
 			);
@@ -204,6 +220,49 @@
 				AB3BF5D021D13591003ED3A5 /* Main.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		ABEE503921E1F86600478DA2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ABEE503A21E1F88800478DA2 /* GoogleVisionEntity.swift */,
+				ABEE503C21E1F98200478DA2 /* RateLimitEntity.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ABEE503E21E1FA0100478DA2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				ABEE504121E1FA6900478DA2 /* Endpoints */,
+				ABEE503F21E1FA1B00478DA2 /* GithubRequest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		ABEE504121E1FA6900478DA2 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				ABEE504321E1FA9400478DA2 /* Google */,
+				ABEE504221E1FA8B00478DA2 /* Github */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		ABEE504221E1FA8B00478DA2 /* Github */ = {
+			isa = PBXGroup;
+			children = (
+				ABEE504621E1FBE600478DA2 /* RateLimitRequest.swift */,
+			);
+			path = Github;
+			sourceTree = "<group>";
+		};
+		ABEE504321E1FA9400478DA2 /* Google */ = {
+			isa = PBXGroup;
+			children = (
+				ABEE504421E1FB4F00478DA2 /* VisionRequest.swift */,
+			);
+			path = Google;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +404,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -363,8 +423,13 @@
 			files = (
 				AB3BF5CF21D13591003ED3A5 /* ViewController.swift in Sources */,
 				AB3BF60A21D13C32003ED3A5 /* CameraViewController.swift in Sources */,
+				ABEE504721E1FBE600478DA2 /* RateLimitRequest.swift in Sources */,
+				ABEE503B21E1F88800478DA2 /* GoogleVisionEntity.swift in Sources */,
+				ABEE504021E1FA1B00478DA2 /* GithubRequest.swift in Sources */,
 				AB3BF60321D13BC7003ED3A5 /* StoryBoards.swift in Sources */,
+				ABEE503D21E1F98200478DA2 /* RateLimitEntity.swift in Sources */,
 				AB3BF5CD21D13591003ED3A5 /* AppDelegate.swift in Sources */,
+				ABEE504521E1FB4F00478DA2 /* VisionRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
