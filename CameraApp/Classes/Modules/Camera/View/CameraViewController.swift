@@ -13,6 +13,7 @@ import RxCocoa
 
 class CameraViewController: UIViewController {
     @IBOutlet weak var camera : UIButton!
+    @IBOutlet weak var category : UILabel!
     
     private let bag = DisposeBag()
     
@@ -42,13 +43,14 @@ extension CameraViewController:UIImagePickerControllerDelegate{
     //　撮影が完了時した時に呼ばれる
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         // 撮影した画像
-        let captureImage = info[.originalImage] as? UIImage
+        let captureImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         
         guard let image = captureImage,
             var imageData = captureImage?.pngData() else {
-                print("画像データがないみたい☠️")
+                print("画像データがない")
                 return
         }
+        
         if (imageData.count > 2097152) {
             let oldSize: CGSize = image.size
             let newSize: CGSize = CGSize(width: 800, height: oldSize.height / oldSize.width * 800)
@@ -62,12 +64,14 @@ extension CameraViewController:UIImagePickerControllerDelegate{
             result in
             switch result {
             case .success(let response):
-                print("成功")
+                print("成功😆")
                 print(response.labels)
+                self.category.text = (response.labels.joined(separator: ","))
             case .failure(let error):
-                print("error: \(error)")
+                print("error: \(error)💀")
             }
         }
+        
         // 撮影した画像をカメラロールに保存
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
         print("🐔")
@@ -75,6 +79,7 @@ extension CameraViewController:UIImagePickerControllerDelegate{
         picker.dismiss(animated: true, completion: nil)
         print("🐤")
     }
+    
     // 撮影がキャンセルされた時に呼ばれる
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
@@ -95,4 +100,3 @@ extension CameraViewController:UIImagePickerControllerDelegate{
 extension CameraViewController:UINavigationControllerDelegate{
     
 }
-

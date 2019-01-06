@@ -24,7 +24,8 @@
 		ABEE504521E1FB4F00478DA2 /* VisionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEE504421E1FB4F00478DA2 /* VisionRequest.swift */; };
 		ABEE504721E1FBE600478DA2 /* RateLimitRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEE504621E1FBE600478DA2 /* RateLimitRequest.swift */; };
 		ABEE504821E1FC5D00478DA2 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3BF5FF21D13940003ED3A5 /* RxCocoa.framework */; };
-		ABEE504A21E1FC6D00478DA2 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABEE504921E1FC6D00478DA2 /* APIKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		ABEE504D21E2457700478DA2 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABEE504921E1FC6D00478DA2 /* APIKit.framework */; };
+		ABEE504E21E2464100478DA2 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABEE504B21E23E9200478DA2 /* Result.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		ABEE504421E1FB4F00478DA2 /* VisionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionRequest.swift; sourceTree = "<group>"; };
 		ABEE504621E1FBE600478DA2 /* RateLimitRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateLimitRequest.swift; sourceTree = "<group>"; };
 		ABEE504921E1FC6D00478DA2 /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
+		ABEE504B21E23E9200478DA2 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABEE504A21E1FC6D00478DA2 /* APIKit.framework in Frameworks */,
+				ABEE504E21E2464100478DA2 /* Result.framework in Frameworks */,
+				ABEE504D21E2457700478DA2 /* APIKit.framework in Frameworks */,
 				ABEE504821E1FC5D00478DA2 /* RxCocoa.framework in Frameworks */,
 				AB3BF60021D13940003ED3A5 /* RxSwift.framework in Frameworks */,
 			);
@@ -181,6 +184,7 @@
 		AB3BF5FD21D1393F003ED3A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ABEE504B21E23E9200478DA2 /* Result.framework */,
 				ABEE504921E1FC6D00478DA2 /* APIKit.framework */,
 				AB3BF5FF21D13940003ED3A5 /* RxCocoa.framework */,
 				AB3BF5FE21D13940003ED3A5 /* RxSwift.framework */,
@@ -405,6 +409,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -610,6 +615,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
+				INCLUDED_SOURCE_FILE_NAMES = "";
 				INFOPLIST_FILE = CameraApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -632,6 +638,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
+				INCLUDED_SOURCE_FILE_NAMES = "";
 				INFOPLIST_FILE = CameraApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

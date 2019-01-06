@@ -12,7 +12,7 @@ import APIKit
 struct VisionRequest: Request {
     typealias Response = GoogleVision
     
-    var googleAPIKey = "YOUR KEY"
+    var googleAPIKey = "APIKEY"
     var base64image = ""
     
     var method: HTTPMethod {

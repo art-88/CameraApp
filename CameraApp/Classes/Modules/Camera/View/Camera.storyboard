@@ -22,21 +22,34 @@
                                 <rect key="frame" x="156.5" y="318.5" width="62" height="30"/>
                                 <state key="normal" title="写真撮影"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="wordWrap" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="ZHN-Yf-4RE">
+                                <rect key="frame" x="62.5" y="448.5" width="250" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="oGb-dw-eVg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="v1c-Qb-nfc" firstAttribute="centerY" secondItem="1pd-z4-pqF" secondAttribute="centerY" id="89B-wE-gyv"/>
+                            <constraint firstItem="ZHN-Yf-4RE" firstAttribute="centerX" secondItem="1pd-z4-pqF" secondAttribute="centerX" id="SFb-A6-wPq"/>
+                            <constraint firstItem="ZHN-Yf-4RE" firstAttribute="top" secondItem="v1c-Qb-nfc" secondAttribute="bottom" constant="100" id="Tug-2x-8TC"/>
+                            <constraint firstItem="ZHN-Yf-4RE" firstAttribute="centerX" secondItem="1pd-z4-pqF" secondAttribute="centerX" id="Vxp-bb-EQY"/>
                             <constraint firstItem="v1c-Qb-nfc" firstAttribute="centerX" secondItem="1pd-z4-pqF" secondAttribute="centerX" id="jil-bl-94p"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ds9-mj-e6k"/>
                     </view>
                     <connections>
                         <outlet property="camera" destination="v1c-Qb-nfc" id="4x5-Nd-sp2"/>
+                        <outlet property="category" destination="ZHN-Yf-4RE" id="VXj-CS-GMR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZv-dX-hat" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="38" y="-20"/>
+            <point key="canvasLocation" x="37.600000000000001" y="-20.239880059970016"/>
         </scene>
     </scenes>
 </document>
