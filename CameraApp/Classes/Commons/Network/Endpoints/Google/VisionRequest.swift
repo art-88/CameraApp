@@ -12,7 +12,7 @@ import APIKit
 struct VisionRequest: Request {
     typealias Response = GoogleVision
     
-    var googleAPIKey = "APIKEY"
+    var googleAPIKey = "KEY"
     var base64image = ""
     
     var method: HTTPMethod {
@@ -49,8 +49,7 @@ struct VisionRequest: Request {
                 ],
                 "features": [
                     [
-                        "type": "LABEL_DETECTION",
-                        "maxResults": 5
+                        "type": "DOCUMENT_TEXT_DETECTION"
                     ]
                 ]
             ]

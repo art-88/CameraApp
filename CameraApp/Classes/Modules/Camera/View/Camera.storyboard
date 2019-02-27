@@ -23,10 +23,7 @@
                                 <state key="normal" title="写真撮影"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="wordWrap" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="ZHN-Yf-4RE">
-                                <rect key="frame" x="62.5" y="448.5" width="250" height="20.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="oGb-dw-eVg"/>
-                                </constraints>
+                                <rect key="frame" x="152.5" y="448.5" width="70.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

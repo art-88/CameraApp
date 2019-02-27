@@ -14,8 +14,8 @@ struct GoogleVision {
     init?(dictionary: [String: AnyObject]) {
         print(dictionary)
         let responses = dictionary["responses"]?[0] as? [String: AnyObject]
-        let _ = responses?["labelAnnotations"] as? [[String: AnyObject]]
-        guard let labelObjects = responses?["labelAnnotations"] as? [[String: AnyObject]] else {
+        let _ = responses?["textAnnotations"] as? [[String: AnyObject]]
+        guard let labelObjects = responses?["textAnnotations"] as? [[String: AnyObject]] else {
             return nil
         }
         

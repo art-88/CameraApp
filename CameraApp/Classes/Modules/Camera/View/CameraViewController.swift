@@ -65,8 +65,7 @@ extension CameraViewController:UIImagePickerControllerDelegate{
             switch result {
             case .success(let response):
                 print("成功😆")
-                print(response.labels)
-                self.category.text = (response.labels.joined(separator: ","))
+                self.category.text = (response.labels.description)
             case .failure(let error):
                 print("error: \(error)💀")
             }
