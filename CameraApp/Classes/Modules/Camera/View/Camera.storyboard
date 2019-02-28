@@ -19,29 +19,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1c-Qb-nfc">
-                                <rect key="frame" x="156.5" y="318.5" width="62" height="30"/>
+                                <rect key="frame" x="273" y="60" width="62" height="30"/>
                                 <state key="normal" title="写真撮影"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="wordWrap" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="ZHN-Yf-4RE">
-                                <rect key="frame" x="152.5" y="448.5" width="70.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分析結果" textAlignment="center" lineBreakMode="wordWrap" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="ZHN-Yf-4RE">
+                                <rect key="frame" x="152.5" y="120" width="70.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70.5" id="Jm7-Ud-Vqo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIx-SL-gME">
+                                <rect key="frame" x="40" y="60" width="41" height="30"/>
+                                <state key="normal" title="Photo"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="v1c-Qb-nfc" firstAttribute="centerY" secondItem="1pd-z4-pqF" secondAttribute="centerY" id="89B-wE-gyv"/>
-                            <constraint firstItem="ZHN-Yf-4RE" firstAttribute="centerX" secondItem="1pd-z4-pqF" secondAttribute="centerX" id="SFb-A6-wPq"/>
-                            <constraint firstItem="ZHN-Yf-4RE" firstAttribute="top" secondItem="v1c-Qb-nfc" secondAttribute="bottom" constant="100" id="Tug-2x-8TC"/>
-                            <constraint firstItem="ZHN-Yf-4RE" firstAttribute="centerX" secondItem="1pd-z4-pqF" secondAttribute="centerX" id="Vxp-bb-EQY"/>
-                            <constraint firstItem="v1c-Qb-nfc" firstAttribute="centerX" secondItem="1pd-z4-pqF" secondAttribute="centerX" id="jil-bl-94p"/>
+                            <constraint firstItem="VIx-SL-gME" firstAttribute="top" secondItem="Ds9-mj-e6k" secondAttribute="top" constant="40" id="9fD-87-inx"/>
+                            <constraint firstItem="ZHN-Yf-4RE" firstAttribute="top" secondItem="Ds9-mj-e6k" secondAttribute="top" constant="100" id="JEe-vj-dmI"/>
+                            <constraint firstItem="ZHN-Yf-4RE" firstAttribute="centerX" secondItem="1pd-z4-pqF" secondAttribute="centerX" id="O4w-hz-RSt"/>
+                            <constraint firstItem="v1c-Qb-nfc" firstAttribute="top" secondItem="Ds9-mj-e6k" secondAttribute="top" constant="40" id="PMl-qt-XBY"/>
+                            <constraint firstItem="VIx-SL-gME" firstAttribute="leading" secondItem="Ds9-mj-e6k" secondAttribute="leading" constant="40" id="c5D-V4-SLY"/>
+                            <constraint firstItem="Ds9-mj-e6k" firstAttribute="trailing" secondItem="v1c-Qb-nfc" secondAttribute="trailing" constant="40" id="zhJ-Vm-2hY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ds9-mj-e6k"/>
                     </view>
                     <connections>
                         <outlet property="camera" destination="v1c-Qb-nfc" id="4x5-Nd-sp2"/>
                         <outlet property="category" destination="ZHN-Yf-4RE" id="VXj-CS-GMR"/>
+                        <outlet property="photo" destination="VIx-SL-gME" id="OFz-L2-zmW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZv-dX-hat" userLabel="First Responder" sceneMemberID="firstResponder"/>

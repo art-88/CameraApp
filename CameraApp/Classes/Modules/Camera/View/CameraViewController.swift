@@ -13,6 +13,7 @@ import RxCocoa
 
 class CameraViewController: UIViewController {
     @IBOutlet weak var camera : UIButton!
+    @IBOutlet weak var photo : UIButton!
     @IBOutlet weak var category : UILabel!
     
     private let bag = DisposeBag()
@@ -25,6 +26,12 @@ class CameraViewController: UIViewController {
                 self?.startCamera()
             }
             ).disposed(by :bag)
+        
+        photo.rx.tap.asDriver().drive(
+            onNext: { [weak self] _ in
+                self?.openPhotoLibrary()
+            }
+            ).disposed(by :bag)
     }
     
     func startCamera(){
@@ -35,6 +42,16 @@ class CameraViewController: UIViewController {
             cameraPicker.sourceType = .camera
             cameraPicker.delegate = self
             self.present(cameraPicker, animated: true, completion: nil)
+        }
+    }
+    func openPhotoLibrary(){
+        // フォトライブラリが利用可能かチェック
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+            // フォト
+            let photoPicker = UIImagePickerController()
+            photoPicker.sourceType = .photoLibrary
+            photoPicker.delegate = self
+            self.present(photoPicker, animated: true, completion: nil)
         }
     }
 }
@@ -65,7 +82,9 @@ extension CameraViewController:UIImagePickerControllerDelegate{
             switch result {
             case .success(let response):
                 print("成功😆")
-                self.category.text = (response.labels.description)
+                print(response)
+                self.category.numberOfLines = 0 
+                self.category.text = (response.labels).joined()
             case .failure(let error):
                 print("error: \(error)💀")
             }

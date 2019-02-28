@@ -49,7 +49,8 @@ struct VisionRequest: Request {
                 ],
                 "features": [
                     [
-                        "type": "DOCUMENT_TEXT_DETECTION"
+                        "type": "TEXT_DETECTION",
+                        "maxResults": 5
                     ]
                 ]
             ]
